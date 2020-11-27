@@ -1,4 +1,4 @@
-import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking, Separator} from '../style/style'
+import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking, ratingPlayer} from '../style/style'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 const zero = 0;
@@ -16,21 +16,38 @@ function Ranking () {
     players.sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating))// colocando array em ordem decrescente
     return (
         <ContainerRanking>
+            <div>
             <FontNameAndRanking>
-                Nome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rating
+                Nome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </FontNameAndRanking>
             {
                 players.map((element,i) => {
                     return (
                         <RenderData>
                             <NameRanking> 
-                    {i+1}. {element.name} 
-                             </NameRanking>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                             <NameRanking>{element.rating}</NameRanking>
+                    {i+1}. {element.name}
+                             </NameRanking>
                         </RenderData>
                     )
                 })
             }
+            </div>
+            <div>
+                <FontNameAndRanking>
+                    Rating
+                </FontNameAndRanking>
+                {
+                    players.map((element) => {
+                        return (
+                            <RenderData>
+                               <NameRanking>
+                                   {element.rating}
+                               </NameRanking>
+                            </RenderData>
+                        )
+                    })
+                }
+            </div>
         </ContainerRanking>
     )
 }

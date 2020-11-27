@@ -46,9 +46,10 @@ export const ContainerChildren = styled.div `
 
 export const ContainerRanking = styled.div ` 
     width: 300px;
-    height: 500px;
+    height: 200px;
     background-color: black;
-
+    display: flex;
+    flex-direction: row;
     margin: 10px;
 `
 export const ContainerLastMatches = styled.div ` 
@@ -83,4 +84,6 @@ export const NameRanking = styled.p `
     color: white;
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
+    border-bottom: 1px dashed white;
+    margin: 5px;
 `
