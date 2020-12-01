@@ -1,7 +1,6 @@
-import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking, ratingPlayer} from '../style/style'
+import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking} from '../style/style'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-const zero = 0;
 
 function Ranking () {
     const [players, setPlayers ] = useState([])
