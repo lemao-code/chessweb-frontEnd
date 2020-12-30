@@ -54,11 +54,16 @@ export const ContainerRanking = styled.div `
 `
 export const ContainerLastMatches = styled.div ` 
     width: 300px;
-    height: 500px;
-    background-color: white;
-    border: 2px solid yellow;
+    height: auto;
+    background-color: black;
     margin: 10px;
+
 `
+export const BoxLastMatchs = styled.div ` 
+    display: flex;
+    flex-direction: row;
+`
+
 
 export const ContainerAddMatch = styled.div ` 
     width: 300px;
@@ -78,6 +83,7 @@ export const FontNameAndRanking = styled.h1 `
     color: white;
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
+
 `
 
 export const NameRanking = styled.p ` 
@@ -86,4 +92,64 @@ export const NameRanking = styled.p `
     font-size: 15px;
     border-bottom: 1px dashed white;
     margin: 5px;
+`
+
+export const NameLastMatchsWinner = styled.p ` 
+    color: white;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border-bottom: 2px dashed;
+    border-color: ${props => props.colorwinner};
+    margin: 5px;
+`
+export const NameLastMatchLoser = styled.p ` 
+    color: white;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border-bottom: 2px dashed;
+    border-color: ${props => props.colorLoser };
+    margin: 5px;
+    margin-left: 10px;
+`
+export const NameLastMatchs = styled.p ` 
+    color: white;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border-bottom: 1px dashed white;
+    margin: 5px;
+`
+
+export const ContainerNameLastMatch = styled.div ` 
+    display: flex;
+    flex-direction: row;
+`
+
+export const ContainerGuide = styled.div `
+
+`
+
+export const GuideText = styled.p `
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+
+`
+
+export const GuideWinner = styled.div `
+    width: 20px;
+    height: 5px;
+    background-color: green;
+`
+export const GuideLoser = styled.div `
+    width: 20px;
+    height: 5px;
+    background-color: red;
+`
+
+export const GuideEmpate = styled.div `
+    width: 20px;
+    height: 5px;
+    background-color: blue;
 `
