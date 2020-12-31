@@ -27,7 +27,7 @@ export const HeaderChess = styled.div `
 `
 export const ContainerChildren = styled.div ` 
     width: 100%;
-    height: 800px;
+    height: auto;
     background-color: black;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -63,16 +63,6 @@ export const BoxLastMatchs = styled.div `
     display: flex;
     flex-direction: row;
 `
-
-
-export const ContainerAddMatch = styled.div ` 
-    width: 300px;
-    height: 500px;
-    background-color: white;
-    border: 2px solid red;
-    margin: 10px;
-`
-
 
 export const RenderData = styled.div ` 
     display: flex;
@@ -152,4 +142,33 @@ export const GuideEmpate = styled.div `
     width: 20px;
     height: 5px;
     background-color: blue;
+`
+////////////////////////// ADD MATCH ///////////////////////////////
+
+export const ContainerAddMatch = styled.div ` 
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border: 2px solid red;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+`
+export const InputAddMatch =  styled.input `
+    ::placeholder {
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
+    width: 130px;
+    height: 20px;
+    margin: 5px;
+    background-color: #4F4F4F;
+    border: none;
+    border-radius: 20px;
+    :focus {
+        outline: none;
+        width: 140px;
+    }
 `
