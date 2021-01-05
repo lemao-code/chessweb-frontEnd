@@ -35,7 +35,7 @@ function LastMatchs () {
            <div>
             {lastmatchs.map((element, i) => {
                 return (
-                        <ContainerNameLastMatch>
+                        <ContainerNameLastMatch key={i}>
                             <NameLastMatchsWinner colorwinner={() => element.empate ? "blue" : "green"}>{element.p1} </NameLastMatchsWinner>
                         </ContainerNameLastMatch>
                         )
@@ -44,7 +44,7 @@ function LastMatchs () {
            <div>
             {lastmatchs.map((element,i) => {
                 return (
-                        <ContainerNameLastMatch>
+                        <ContainerNameLastMatch key={i}>
                             <NameLastMatchLoser colorLoser={() => element.empate ? "blue" : "red"}> {element.p2}</NameLastMatchLoser>
                         </ContainerNameLastMatch>
                         )

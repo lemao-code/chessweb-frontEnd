@@ -149,7 +149,6 @@ export const ContainerAddMatch = styled.div `
     width: 300px;
     height: 300px;
     background-color: black;
-    border: 2px solid red;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -164,11 +163,24 @@ export const InputAddMatch =  styled.input `
     width: 130px;
     height: 20px;
     margin: 5px;
-    background-color: #4F4F4F;
+    background-color: #1C1C1C;
     border: none;
     border-radius: 20px;
     :focus {
         outline: none;
         width: 140px;
     }
+`
+
+
+export const ButtonSubmit = styled.button `
+    width: 80px;
+    height: 35px;
+    background-color: #1C1C1C;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin: 5px;
+    margin-top: 15px;
+
 `

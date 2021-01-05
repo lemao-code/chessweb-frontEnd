@@ -22,7 +22,7 @@ function Ranking () {
             {
                 players.map((element,i) => {
                     return (
-                        <RenderData>
+                        <RenderData key={i}>
                             <NameRanking> 
                     {i+1}. {element.name}
                              </NameRanking>
@@ -36,9 +36,9 @@ function Ranking () {
                     Rating
                 </FontNameAndRanking>
                 {
-                    players.map((element) => {
+                    players.map((element,i) => {
                         return (
-                            <RenderData>
+                            <RenderData key={i}>
                                <NameRanking>
                                    {element.rating}
                                </NameRanking>
