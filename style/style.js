@@ -170,6 +170,7 @@ export const InputAddMatch =  styled.input `
     :focus {
         outline: none;
         width: 140px;
+        color: white;
     }
 `
 

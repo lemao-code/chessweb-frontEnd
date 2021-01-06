@@ -64,7 +64,7 @@ function LastMatchs () {
                 {lastmatchs.map((element, i) => {
                     return (
                         <div key={i}>
-                            <p style={{fontSize: 14, color: "#00FFFF"}}>{formatDate(element.data)}</p>
+                            <p style={{fontSize: 13, color: "#00FFFF", marginTop: 15}}>{formatDate(element.data)}</p>
                         </div>
                     )
                 })}
