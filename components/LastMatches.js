@@ -21,6 +21,16 @@ function LastMatchs () {
         setLastmatchs(prevState => ([...lastmatchs, ...cortado]))
     }
 
+
+    function formatDate (data) {
+        const dateGame =  new Date(`${data}`)
+        const formatedDate = dateGame.toString()
+        const cutDate = formatedDate.slice(0,25)
+      
+        return (
+            <div>{cutDate}</div>
+        )
+    }
     return (
         <ContainerLastMatches>
              <FontNameAndRanking>
@@ -41,13 +51,22 @@ function LastMatchs () {
                         )
             })}
            </div>
-           <div>
+           <div >
             {lastmatchs.map((element,i) => {
                 return (
                         <ContainerNameLastMatch key={i}>
                             <NameLastMatchLoser colorLoser={() => element.empate ? "blue" : "red"}> {element.p2}</NameLastMatchLoser>
                         </ContainerNameLastMatch>
                         )
+                })}
+            </div>
+            <div style={{marginTop: -5, marginLeft: 30}}>
+                {lastmatchs.map((element, i) => {
+                    return (
+                        <div key={i}>
+                            <p style={{fontSize: 14, color: "#00FFFF"}}>{formatDate(element.data)}</p>
+                        </div>
+                    )
                 })}
             </div>
             </BoxLastMatchs>

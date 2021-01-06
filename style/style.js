@@ -152,6 +152,7 @@ export const ContainerAddMatch = styled.div `
     margin: 10px;
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
 
 `
 export const InputAddMatch =  styled.input `
