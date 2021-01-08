@@ -1,9 +1,11 @@
 import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking} from '../style/style'
+import { useRouter } from 'next/router'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 function Ranking () {
     const [players, setPlayers ] = useState([])
+    const router = useRouter()
     async function RankingPlayers () {
         const data = await axios.get('http://localhost:3333/busca')
         setPlayers(data.data)
@@ -23,10 +25,16 @@ function Ranking () {
                 players.map((element,i) => {
                     return (
                         <RenderData key={i}>
-                            <NameRanking> 
+                            <button onClick={async () => {
+                              await localStorage.setItem('id', element.id)
+                              router.push('/Perfil')
+                            }} style={{border: "none", outline: "none", backgroundColor: "transparent"}}>
+                            <NameRanking>
                     {i+1}. {element.name}
                              </NameRanking>
+                             </button>
                         </RenderData>
+                       
                     )
                 })
             }
