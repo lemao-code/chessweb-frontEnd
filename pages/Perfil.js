@@ -1,4 +1,6 @@
 import {useEffect, useState} from 'react'
+import {PerfilWords} from '../style/style'
+import Contras from '../components/Contras'
 import axios from 'axios'
 
 export default function Perfil () {
@@ -12,7 +14,6 @@ export default function Perfil () {
                 "id": id
                 })
                 getperfil.push(response.data)
-                console.log(getperfil)
                 setGetPerfil([...getperfil, response.data])
 
             }catch(err) {
@@ -24,41 +25,53 @@ export default function Perfil () {
     },[])
     
     return (
-        <div>
+        <body style={{margin: 0, marginTop: -30, backgroundColor: "black"}}>
+        <div style={{backgroundColor: "black" , height: "100%", width: "100%"}} >
             {getperfil == 0 ? (
                 <div>
                     sem dadooooooooooooooos
                     </div>
             ) : (
-                <div>
+                <div >
                     {getperfil[0].perfil.map((element, i) => {
                         return (
-                            <div>
-                                Perfil
-                                <div style={{display: "flex", flexDirection: "column"}}>
+                            <div >
+                                <p style={{color: "white", fontSize: 29, fontWeight: "bold" , textAlign: "center"}}>Perfil</p>
+                                <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                                     <div>
-                                        {element.name}
+                                        <p style={{fontSize: 30, fontWeight: "bold", color: "#00FFFF", textAlign: "center"}}>{element.name}</p>
                                     </div>
                                     <div>
-                                        Rating {element.rating}
+                                        <PerfilWords> Rating &nbsp;&nbsp;&nbsp;{element.rating}</PerfilWords>
                                     </div>
                                     <div>    
-                                       Vitórias  {element.vitorias_total}
+                                       <PerfilWords> Vitórias &nbsp;&nbsp;&nbsp;{element.vitorias_total}</PerfilWords> 
                                     </div>
                                     <div>
-                                       Derrotas  {element.derrotas_total}
+                                    <PerfilWords> Derrotas&nbsp;&nbsp;&nbsp;  {element.derrotas_total} </PerfilWords>
                                     </div>
                                     <div>
-                                       Empates {element.empates_totais}
+                                       <PerfilWords>Empates&nbsp;&nbsp;&nbsp; {element.empates_totais} </PerfilWords>
                                     </div>
                                 </div>
-                                <div>
-                                    </div>
                             </div>
                         )
+                    })}
+                    
+                   <p style={{color: "white", textAlign: "center", fontSize: 25, color: "#FFD700", fontWeight: "bold"}}>Contras</p>
+                   <div style={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
+                        <p style={{color: "green" , textAlign: "center"}}> Vitoria </p> <p style={{color: "white", fontWeight:"bold", marginLeft: 10}}>/</p>
+                        <p style={{color: "red" , textAlign: "center", marginLeft: 10}}> Derrota </p> <p style={{color: "white", fontWeight:"bold", marginLeft:10}}>|</p>
+                        <p style={{color: "blue" , textAlign: "center", marginLeft: 10}}>Empate</p>
+                    </div>
+                    {getperfil[0].contras.map((element, i) => {
+
+                        return  <Contras contras={element} />
+                        
                     })}
                     </div>
             )}
         </div>
+        </body>
     )
 }

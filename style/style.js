@@ -186,3 +186,9 @@ export const ButtonSubmit = styled.button `
     margin-top: 15px;
 
 `
+
+export const PerfilWords = styled.p ` 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+`
