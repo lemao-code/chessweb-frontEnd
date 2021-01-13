@@ -28,7 +28,7 @@ function LastMatchs () {
         const cutDate = formatedDate.slice(0,25)
       
         return (
-            <div>{cutDate}</div>
+            <div>  <p style={{fontSize: 13, color: "#00FFFF", marginTop: 15}}>{cutDate} </p></div>
         )
     }
     return (
@@ -64,7 +64,7 @@ function LastMatchs () {
                 {lastmatchs.map((element, i) => {
                     return (
                         <div key={i}>
-                            <p style={{fontSize: 13, color: "#00FFFF", marginTop: 15}}>{formatDate(element.data)}</p>
+                           {formatDate(element.data)}
                         </div>
                     )
                 })}

@@ -1,7 +1,6 @@
 import {PerfilWords} from '../style/style'
 export default function Contras ({contras}) {
     const idperfil = localStorage.getItem('id')
-//    console.log(contras)
     function getNames(id) {
         if(id === "p1") {
             return "Thiago"
@@ -22,9 +21,9 @@ export default function Contras ({contras}) {
     const players = Object.entries(contras)
    return (
        <div >
-           { players.map((element) => {
+           { players.map((element, i) => {
                let _key
-               console.log(element[1])
+        
                if(element[1][0].id_player == idperfil) {
                    _key =  0
                }else {
@@ -32,7 +31,7 @@ export default function Contras ({contras}) {
                }
             
         return  (
-                <div>
+                <div key={i}>
                     <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}> 
                             <PerfilWords>
                                 {getNames(element[0])}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {element[1][_key].vitorias}&nbsp; /&nbsp; {element[1][_key].derrotas} &nbsp;&nbsp;|&nbsp;&nbsp; {element[1][_key].empates}

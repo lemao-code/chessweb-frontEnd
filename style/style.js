@@ -1,37 +1,21 @@
 import styled from 'styled-components'
 
-export const Alpha = styled.body ` 
-    margin: -10px;
-    padding: 0px;
-    height: 130vh;
-    background-color: black;
-`
-
 
 export const Container = styled.div ` 
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 0px;
-    padding: 0px;
+    background-color: rgb(39,72,115);
+  
 `
 
-export const HeaderChess = styled.div ` 
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(39,72,115);
-`
 export const ContainerChildren = styled.div ` 
     width: 100%;
     height: auto;
     background-color: black;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
-    position: absolute;
     top: 550px;
     margin: 0px;
     padding: 0px;

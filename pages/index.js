@@ -1,4 +1,4 @@
-import {Container, HeaderChess, Alpha, ContainerChildren} from '../style/style'
+import {Container, HeaderChess, ContainerChildren} from '../style/style'
 import Image from 'next/image'
 import Ranking from '../components/Ranking'
 import LastMatches from '../components/LastMatches'
@@ -7,18 +7,18 @@ import AddMatch from '../components/AddMatch'
 
 function Home () {
     return (
-        <Alpha>
+        <div style={{padding: 0, marginLeft:-10, marginTop: -20, marginBottom: -10, backgroundColor: "black", width:"120%", height: "auto"}}>
             <Container >
-                <HeaderChess>
+          
                     <Image src="/chess.webp" quality="100" responsive="true" width="1200" height="600"/>
-                </HeaderChess>
+           
                 <ContainerChildren>
                     <Ranking />
                     <LastMatches />
                     <AddMatch />
                 </ContainerChildren>
             </Container>
-        </Alpha>
+         </div>
         
     )
 }

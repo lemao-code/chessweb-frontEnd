@@ -25,17 +25,17 @@ export default function Perfil () {
     },[])
     
     return (
-        <body style={{margin: 0, marginTop: -30, backgroundColor: "black"}}>
-        <div style={{backgroundColor: "black" , height: "100%", width: "100%"}} >
+    
+        <div style={{backgroundColor: "black" , marginTop: -30, marginLeft: -10, marginRight: -5, marginBottom: -30, width: "110%", height: "110%"}} >
             {getperfil == 0 ? (
                 <div>
                     sem dadooooooooooooooos
                     </div>
             ) : (
-                <div >
+                <div>
                     {getperfil[0].perfil.map((element, i) => {
                         return (
-                            <div >
+                            <div key={i} >
                                 <p style={{color: "white", fontSize: 29, fontWeight: "bold" , textAlign: "center"}}>Perfil</p>
                                 <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                                     <div>
@@ -66,12 +66,12 @@ export default function Perfil () {
                     </div>
                     {getperfil[0].contras.map((element, i) => {
 
-                        return  <Contras contras={element} />
+                        return  <Contras key={i} contras={element} />
                         
                     })}
                     </div>
             )}
         </div>
-        </body>
+    
     )
 }
