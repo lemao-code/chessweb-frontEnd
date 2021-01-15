@@ -15,7 +15,7 @@ function LastMatchs () {
 
    
     async function getLastMatchs () {
-        const { data } = await axios.get('http://localhost:3333/lastmatchs')
+        const { data } = await axios.get('https://chessfrineds.herokuapp.com/lastmatchs')
         let arrayreverse = data.reverse()
         let cortado = arrayreverse.slice(0,10)
         setLastmatchs(prevState => ([...lastmatchs, ...cortado]))

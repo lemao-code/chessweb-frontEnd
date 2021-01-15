@@ -9,7 +9,7 @@ function AddMatch () {
 
     async function handleAddMatch (winner,loser,empate) {
         try {
-            const response = await axios.post('http://localhost:3333/addmatch', {
+            const response = await axios.post('https://chessfrineds.herokuapp.com/addmatch', {
             "p1": `${winner}`,
             "p2": `${loser}`,
             "empate": {
