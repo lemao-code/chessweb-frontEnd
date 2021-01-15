@@ -7,7 +7,7 @@ function Ranking () {
     const [players, setPlayers ] = useState([])
     const router = useRouter()
     async function RankingPlayers () {
-        const data = await axios.get('http://localhost:3333/busca')
+        const data = await axios.get('https://chessfrineds.herokuapp.com/busca')
         setPlayers(data.data)
     }
     useEffect(() => {
