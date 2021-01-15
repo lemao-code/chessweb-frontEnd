@@ -10,7 +10,7 @@ export default function Perfil () {
             const id = localStorage.getItem('id')
             try {
                
-                const response = await axios.post('http://localhost:3333/perfil', {
+                const response = await axios.post('https://chessfrineds.herokuapp.com/perfil', {
                 "id": id
                 })
                 getperfil.push(response.data)
