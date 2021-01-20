@@ -11,9 +11,9 @@ function Home () {
 
     return (
         <body>
-            <head>
+            <Head>
             <script data-ad-client="ca-pub-7702738899679859" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        </head>
+        </Head>
             <div style={{padding: 0, marginLeft:-10, marginTop: -20, marginBottom: -10, backgroundColor: "black", width:"120%", height: "auto"}}>
             <Container >
                     <Image src="/chess.webp" quality="100" responsive="true" width="1200" height="600"/>
