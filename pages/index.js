@@ -18,20 +18,17 @@ function Home () {
         
         <div style={{padding: 0, marginLeft:-10, marginTop: -20, marginBottom: -10, backgroundColor: "black", width:"120%", height: "auto"}}>
             <Head>
-            <script
-   async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
- />
- <script
-          dangerouslySetInnerHTML={{
-            __html: `
-               (adsbygoogle = window.adsbygoogle || []).push({
+            <script data-ad-client="ca-pub-7702738899679859" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                <script
+                    dangerouslySetInnerHTML={{
+                __html: `
+                (adsbygoogle = window.adsbygoogle || []).push({
                    google_ad_client: ${GA_TRACKING_ID},
                    enable_page_level_ads: true
-              });
+                });
                 `
-          }}
- />
+                }}
+                />
         </Head>
             <Container >
           
