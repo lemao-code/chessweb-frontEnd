@@ -9,22 +9,14 @@ import AddMatch from '../components/AddMatch'
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 function Home () {
 
-    useEffect(()=> {
-        if(typeof window !== 'undefined'){
-              (window.adsbygoogle = window.adsbygoogle || []).push({})
-        }
-  }, [])
     return (
-        
-        <div style={{padding: 0, marginLeft:-10, marginTop: -20, marginBottom: -10, backgroundColor: "black", width:"120%", height: "auto"}}>
-            <Head>
+        <body>
+            <head>
             <script data-ad-client="ca-pub-7702738899679859" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                
-        </Head>
+        </head>
+            <div style={{padding: 0, marginLeft:-10, marginTop: -20, marginBottom: -10, backgroundColor: "black", width:"120%", height: "auto"}}>
             <Container >
-          
                     <Image src="/chess.webp" quality="100" responsive="true" width="1200" height="600"/>
-           
                 <ContainerChildren>
                     <Ranking />
                     <LastMatches />
@@ -32,6 +24,7 @@ function Home () {
                 </ContainerChildren>
             </Container>
          </div>
+         </body>
         
     )
 }
