@@ -1,7 +1,6 @@
 
-import {useEffect} from 'react'
 import {Container, ContainerChildren} from '../style/style'
-import {Head} from 'next/document'
+import Head from 'next/head'
 import Image from 'next/image'
 import Ranking from '../components/Ranking'
 import LastMatches from '../components/LastMatches'
