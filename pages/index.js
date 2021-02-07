@@ -9,7 +9,7 @@ const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 function Home () {
 
     return (
-        <body >
+        <div >
             <Head>
             <title>Chess</title>
         </Head>
@@ -23,7 +23,7 @@ function Home () {
                 </ContainerChildren>
             </Container>
          </div>
-         </body>
+         </div>
         
     )
 }
