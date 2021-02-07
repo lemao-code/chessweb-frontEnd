@@ -10,9 +10,9 @@ const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 function Home () {
 
     return (
-        <body>
+        <body >
             <Head>
-            <script data-ad-client="ca-pub-7702738899679859" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <title>Chess</title>
         </Head>
             <div style={{padding: 0, marginLeft:-10, marginTop: -20, marginBottom: -10, backgroundColor: "black", width:"120%", height: "auto"}}>
             <Container >
