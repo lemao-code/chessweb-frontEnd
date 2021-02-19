@@ -176,3 +176,11 @@ export const PerfilWords = styled.p `
     font-size: 20px;
     font-weight: bold;
 `
+
+export const RatingPlayers = styled.p ` 
+    color: white;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    border-bottom: 1px dashed white;
+    margin-top: 5px;
+`
