@@ -1,4 +1,4 @@
-import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking, RatingPlayers} from '../style/style'
+import {ContainerRanking, RenderData, FontNameAndRanking,NameRanking, RatingPlayers, FontRating} from '../style/style'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
@@ -40,9 +40,9 @@ function Ranking () {
             }
             </div>
             <div>
-                <FontNameAndRanking>
+                <FontRating>
                     Rating
-                </FontNameAndRanking>
+                </FontRating>
                 {
                     players.map((element,i) => {
                         return (

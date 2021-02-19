@@ -59,6 +59,13 @@ export const FontNameAndRanking = styled.h1 `
     font-size: 20px;
 
 `
+export const FontRating = styled.h1 ` 
+    color: white;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-bottom: 18px;
+
+`
 
 export const NameRanking = styled.p ` 
     color: white;
@@ -180,7 +187,7 @@ export const PerfilWords = styled.p `
 export const RatingPlayers = styled.p ` 
     color: white;
     font-family:  Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     border-bottom: 1px dashed white;
-    margin-top: 5px;
+    margin-top: 0px;
 `
